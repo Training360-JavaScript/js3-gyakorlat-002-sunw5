@@ -16,8 +16,8 @@ const cookieHandler = {
     return cookiesObj;
   },
   toSessionStorage() {
-    const cookiesObj = Object.entries(this.getAll());
-    cookiesObj.forEach((cookie) => {
+    const cookiesArr = Object.entries(this.getAll());
+    cookiesArr.forEach((cookie) => {
       sessionStorage.setItem(cookie[0], cookie[1]);
     });
   },
